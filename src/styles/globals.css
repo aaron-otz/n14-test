@@ -6,5 +6,14 @@ body {
     rgba(148, 187, 233, 1) 100%
   );
   margin: 0; /* Elimina el margen predeterminado del body */
-  font-family: 'Fraunces', sans-serif;
+  font-family: "Fraunces", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+p {
+  color: #555;
 }

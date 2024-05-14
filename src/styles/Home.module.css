@@ -46,14 +46,14 @@
   background-color: transparent; /* Fondo transparente para los botones */
   color: black;
   position: relative; /* Para posicionar el pseudo-elemento de forma relativa */
-  font-family: 'Fraunces', sans-serif;
+  font-family: "Fraunces", sans-serif;
 }
 
 /* Efecto de línea negra en la parte inferior al pasar el cursor */
 .createAccountButton:hover::after,
 .exploreButton:hover::after,
 .loginButton:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0; /* Posición en la parte inferior del botón */
   left: 50%; /* Comienza desde el centro del botón */
@@ -68,7 +68,7 @@
 .createAccountButton::after,
 .exploreButton::after,
 .loginButton::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%; /* Comienza desde el centro del botón */
