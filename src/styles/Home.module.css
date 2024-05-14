@@ -1,0 +1,80 @@
+/* Estilo para el header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+
+.pageName {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Estilo para el cuerpo centrado */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Estilo para el título centrado */
+.centerContent {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Configuración de contenedor de botones */
+.buttonsContainer {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 80px; /* Espacio entre los botones */
+}
+
+/* Configuración de botones */
+.createAccountButton,
+.exploreButton,
+.loginButton {
+  font-size: 17px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent; /* Fondo transparente para los botones */
+  color: black;
+  position: relative; /* Para posicionar el pseudo-elemento de forma relativa */
+  font-family: 'Fraunces', sans-serif;
+}
+
+/* Efecto de línea negra en la parte inferior al pasar el cursor */
+.createAccountButton:hover::after,
+.exploreButton:hover::after,
+.loginButton:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Posición en la parte inferior del botón */
+  left: 50%; /* Comienza desde el centro del botón */
+  height: 2px; /* Altura de la línea */
+  background-color: black; /* Color de la línea */
+  transform: translateX(-50%); /* Centra la línea */
+  transition: width 0.3s ease-out; /* Transición para animar la línea */
+  width: 100%; /* Ancho final de la línea (se expande de centro a orillas) */
+}
+
+/* Estado inicial (sin hover) */
+.createAccountButton::after,
+.exploreButton::after,
+.loginButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Comienza desde el centro del botón */
+  width: 0; /* Ancho inicial es cero */
+  height: 2px; /* Altura de la línea */
+  background-color: black; /* Color de la línea */
+  transform: translateX(-50%); /* Centra la línea */
+  transition: width 0.3s ease-out; /* Transición para animar la línea */
+}
